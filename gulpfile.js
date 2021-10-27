@@ -46,7 +46,7 @@ gulp.task('move-dist-images', function (done) {
 
 gulp.task('move-dist-js', function (done) {
   return gulp.src([
-    './src/js/lazysizes.min.js',
+    './src/js/lozad.min.js',
   ])
     .pipe(gulp.dest('./dist/js'));
 })

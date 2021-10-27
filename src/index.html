@@ -18,7 +18,8 @@
         });
     </script>
     <noscript>
-        <div><img src="https://mc.yandex.ru/watch/84837892" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div><img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                src="https://mc.yandex.ru/watch/84837892" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
@@ -79,27 +80,15 @@
             margin-bottom: 50px;
         }
 
-        /* fade image in after load */
-        .lazyload,
-        .lazyloading {
+        [data-lazyload="true"] {
             opacity: 0;
         }
 
-        .lazyloaded {
+        [data-loaded="true"] {
             opacity: 1;
+            -webkit-transition: opacity 300ms ease-in-out;
+            -o-transition: opacity 300ms ease-in-out;
             transition: opacity 300ms ease-in-out;
-        }
-
-        /* fade image in while loading and show a spinner as background image (good for progressive images) */
-
-        .lazyload {
-            opacity: 0;
-        }
-
-        .lazyloading {
-            opacity: 1;
-            transition: opacity 300ms 1s ease-in-out;
-            background: #f7f7f7 url('images/loader.gif') no-repeat center;
         }
     </style>
 </head>
@@ -107,7 +96,7 @@
 <body>
     <div class="block" style="max-height: 200px;">
         <h1 style="text-align: center; padding-top: 50px;">DEMO LAZYLOAD IMAGES</h1>
-        <div class="version"><b>Version: 1.0.0</b></div>
+        <div class="version"><b>Version: 1.1.0</b></div>
     </div>
 
     <div class="block-example">
@@ -118,492 +107,632 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
                 <div class="row mb-5">
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
-                        <img class="img-fluid rounded lazyload" data-src="./images/image-2.png" alt="image">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-4">
+                        <img data-lazyload="true" decoding="async" srcset="images/placeholder.png"
+                            class="img-fluid rounded" src="./images/image-2.png" alt="image">
                     </div>
                 </div>
             </div>
@@ -613,14 +742,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" /></noscript>
-    <script>
-        window.lazySizesConfig = window.lazySizesConfig || {};
-
-        lazySizesConfig.throttleDelay = 500;
-        lazySizesConfig.loadMode = 3;
-    </script>
-    <script src="./js/lazysizes.min.js"></script>
+    <script src="./js/lozad.min.js"></script>
     <script src="./js/scripts.js"></script>
+
+    <script>
+        var lazyloader = lozad('[data-lazyload="true"]', {
+            rootMargin: '0px 0px', // syntax similar to that of CSS Margin
+            threshold: 0.1, // ratio of element convergence
+            enableAutoReload: true, // it will reload the new image when validating attributes changes
+
+            load: function (el) {
+                var src = el.getAttribute('src');
+                var dataSrcset = el.getAttribute('data-srcset');
+                var dataSizes = el.getAttribute('data-sizes');
+
+                if (src && !dataSrcset) {
+                    el.setAttribute('srcset', src);
+                }
+
+                if (dataSrcset) {
+                    el.setAttribute('srcset', dataSrcset);
+                }
+
+                if (dataSizes) {
+                    el.setAttribute('sizes', dataSizes);
+                }
+            },
+        });
+        lazyloader.observe();
+    </script>
 </body>
 
 </html>

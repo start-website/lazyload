@@ -1624,10 +1624,10 @@ var app = new Vue({
 
       if (/open/gi.test(answer.className)) {
         answer.className = answer.className.replace(/\s(open)/, '');
-        icon.className.replace(/rarr/gim, 'darr');
+        icon.className = icon.className.replace(/darr/gi, 'rarr');
       } else {
         answer.className += ' open';
-        icon.className.replace(/darr/gi, 'rarr');
+        icon.className = icon.className.replace(/rarr/gi, 'darr');
       }
     },
     pageReload: function pageReload() {
@@ -1639,7 +1639,7 @@ var app = new Vue({
   mounted: function mounted() {
     var _this = this;
 
-    axios.get(this.url + 'lazyload-settings/').then(function (response) {
+    axios.get(this.url).then(function (response) {
       var settingsDB = response.data.data.result; // Привидение к числу свойств t-number
 
       for (var item in settingsDB) {
@@ -1652,7 +1652,6 @@ var app = new Vue({
 
       var settingsMerge = Object.assign({}, _this.settings, settingsDB);
       _this.settings = settingsMerge;
-      console.log(_this.settings);
     })["catch"](function (error) {
       return console.log(error);
     })["finally"](function () {

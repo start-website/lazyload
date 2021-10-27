@@ -9,16 +9,15 @@ var app = new Vue({
         button_save_disabled: false,
         error_image: false,
         error_video: false,
-
         // Settings default
         settings: {
-            custom_css: '',
-            active_plugin: false,
-            load_mode: 2,
-            min_size: 40,
-            hFac: 0.4
+          active_plugin: true,
+          vertical_preload: 10,
+          horizontal_preload: 0,
+          autodescribing_sizes: true,
+          forbidden_pages: ''
         }
-    },
+      },
     filters: {
         bool: function (value) {
             if (!value) return ''
@@ -42,10 +41,10 @@ var app = new Vue({
 
             if (/open/gi.test(answer.className)) {
                 answer.className = answer.className.replace(/\s(open)/, '')
-                icon.className.replace(/rarr/gim, 'darr')
+                icon.className = icon.className.replace(/darr/gi, 'rarr')
             } else {
                 answer.className += ' open'
-                icon.className.replace(/darr/gi, 'rarr')
+                icon.className = icon.className.replace(/rarr/gi, 'darr')
             }
         },
         pageReload() {
@@ -56,7 +55,7 @@ var app = new Vue({
     },
     mounted: function () {
         axios
-            .get(this.url + 'lazyload-settings/')
+            .get(this.url)
             .then(response => {
                 const settingsDB = response.data.data.result
 
@@ -71,8 +70,6 @@ var app = new Vue({
 
                 const settingsMerge = Object.assign({}, this.settings, settingsDB)
                 this.settings = settingsMerge
-
-                console.log(this.settings)
             })
             .catch(error => console.log(error))
             .finally(() => (this.loading = false))
