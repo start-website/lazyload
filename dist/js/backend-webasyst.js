@@ -1596,11 +1596,11 @@ var app = new Vue({
     error_video: false,
     // Settings default
     settings: {
-      custom_css: '',
-      active_plugin: false,
-      load_mode: 2,
-      min_size: 40,
-      hFac: 0.4
+      active_plugin: true,
+      vertical_preload: 10,
+      horizontal_preload: 0,
+      autodescribing_sizes: true,
+      forbidden_pages: ''
     }
   },
   filters: {
